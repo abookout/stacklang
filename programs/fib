@@ -1,0 +1,26 @@
+# program: print the fibonacci sequence 1, 1, 2, 3, 5, 8, 13, ...
+
+# setup with 1, 1
+push 1
+print
+push 1
+print
+
+# loop invar: the stack contains two series terms (bottom to top) i and i+1.
+# 'store' larger of the two elements at the bottom for the next iteration
+print
+dup
+roll
+
+# add i and i+1
+add
+
+# prevent integer overflow: 1836311903 is the last fib number reachable before
+# it overflows
+push -1836311903
+add
+ifeq 24
+jump 100
+push 1836311903
+add
+jump 11
