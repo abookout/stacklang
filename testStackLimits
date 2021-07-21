@@ -1,0 +1,7 @@
+# run this and watch your computer's memory slowly be consumed! fun!
+push 1
+dup
+push 1
+add
+print
+jump 3
