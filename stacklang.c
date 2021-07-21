@@ -2,7 +2,7 @@
 
 /*
     Directly inspired from https://stackoverflow.com/a/6888074
-    This language consists of a stack and 7 instructions:
+    This language consists of a stack and 9 instructions:
     - push <num>: push a number onto the stack
     - pop: pop the top number off the stack
     - add: pop the top 2 numbers and push their sum onto the stack

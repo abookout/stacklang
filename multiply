@@ -1,0 +1,37 @@
+# program: multiply the following two numbers and print the result
+# bottom (first-pushed) number used as counter
+push 3
+push 5
+
+# subtract 1 from counter right away or else it will be added one too many times
+push -1
+add
+roll
+# duplicate top number to use as running total
+dup
+
+# loop invar: currently stack looks like (bottom to top) counter, inc, total
+
+# add inc to total 
+dup
+roll
+add
+print
+
+# roll to get counter to top and subtract 1
+roll
+push -1
+add
+print
+
+# loop if the counter has not reached 0
+ifeq 31
+jump 35
+
+roll        # reset position for loop: move counter to bottom
+jump 16
+
+# done: answer is two numbers down
+roll
+roll
+print
