@@ -154,7 +154,6 @@ void executeInstruction(){
 // push a number onto the stack
 void insPush(int val){
     if (stackSize == stackCapacity){
-        printf("insPush resizing size %ld, capacity %ld\n", stackSize, stackCapacity);
         stackCapacity *= 2;
         stack = (int*) realloc(stack, stackCapacity * sizeof(int));
     }
