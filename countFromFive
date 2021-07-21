@@ -1,0 +1,7 @@
+# count down from 5
+push 5
+print
+push -1
+add
+print
+ifeq 4      # jmp if not zero
