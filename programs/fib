@@ -2,7 +2,6 @@
 
 # setup with 1, 1
 push 1
-print
 push 1
 print
 
@@ -15,12 +14,13 @@ roll
 # add i and i+1
 add
 
-# prevent integer overflow: 1836311903 is the last fib number reachable before
-# it overflows
+# prevent integer overflow: 1836311903 is the last fib number reachable
+# before it overflows
 push -1836311903
 add
-ifeq 24
-jump 100
-push 1836311903
+ifeq 23
+jump 100	# break out of the loop if about to overflow
+push 1836311903		# restore the current number
 add
-jump 11
+jump 10		# continue looping
+
